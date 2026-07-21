@@ -10,7 +10,7 @@ import Button from "./Button.vue";
       alt="Ration logo"
     />
     <ul class="text-white flex items-center gap-[2.5rem] font-medium text-base">
-      <li>Home</li>
+      <li class="border-b">Home</li>
       <li>Features</li>
       <li>Pricing</li>
       <li>Docs</li>
