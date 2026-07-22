@@ -54,7 +54,23 @@ import PriceListCards from "./components/PriceListCards.vue";
       friends - we are <br />focussed on extending your collaboration needs with
       more productive apps.
     </p>
-    <SlideCard />
+    <section class="flex items-center">
+      <button class="flex h-[3rem] w-[3rem] items-center justify-center rounded-full bg-[#f4f4f4]">
+        <img
+          src="/BlackArrowIcon.png"
+          class="h-[1.5rem] w-[1.5rem] object-contain"
+          alt="arrow left"
+        />
+      </button>
+      <SlideCard />
+      <button class="flex h-[3rem] w-[3rem] items-center justify-center rounded-full bg-[#f4f4f4]">
+        <img
+          src="/BlackArrowIcon2.png"
+          class="h-[1.5rem] w-[1.5rem] object-contain"
+          alt="arrow right"
+        />
+      </button>
+    </section>
   </section>
 
   <section
@@ -85,7 +101,7 @@ import PriceListCards from "./components/PriceListCards.vue";
     <div class="flex gap-[1rem] items-center mt-[0.5rem] justify-center">
       <p class="text-[1rem] text-text-grey">Select your currency:</p>
       <div
-        class="flex items-center gap-x-[1rem] w-[16.25rem] py-[0.5rem] px-[1rem] border border-e7-grey rounded-md"
+        class="flex items-center gap-x-[1rem] w-[14.25rem] py-[0.5rem] px-[1rem] border border-e7-grey rounded-md"
       >
         <p>NGN - Nigeria Naira</p>
         <img class="w-[1.125rem] h-[1.125rem]" src="/DropdownIcon.png" />
@@ -104,21 +120,16 @@ import PriceListCards from "./components/PriceListCards.vue";
       </div>
     </div>
     <PriceListCards />
-    <p>
+    <p class="font-base text-[1.125rem] text-center text-text-grey mt-[2rem]">
       All prices exclude VAT where applicable. Annual plans billed upfront.
       Savings calculated against monthly pricing. Fair usage limits apply to
       Ration Do and Ration Scale. 24/7 email support for all tiers. Priority
       support for Ration Scale.
     </p>
-    <h3>Need more? Add what you need.</h3>
+    <h3 class="font-lg text-[2.5rem] text-center my-[1.5rem]">Need more? Add what you need.</h3>
     <PricingCards />
   </section>
   <section>
-    <h3>Deployment Plan</h3>
-    <p>
-      Choose the deployment edition that best aligns with your organization's
-      requirements, resources, and strategic objectives.
-    </p>
     <DeploymentCards />
   </section>
   <section>

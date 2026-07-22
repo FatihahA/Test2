@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-dark-blue h-[22.75rem] py-[5rem] px-[2rem]">
+  <section class="bg-dark-blue h-auto [22.75rem] py-[5rem] px-[2rem]">
     <h3 class="font-bold text-white text-[3.5rem] text-center">
       Join our Limited Testing Today
     </h3>

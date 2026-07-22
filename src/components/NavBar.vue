@@ -1,5 +1,9 @@
 <script setup>
+import { ref } from "vue";
 import Button from "./Button.vue";
+
+const navItems = ["Home", "Features", "Pricing", "Docs", "Contact"];
+const selectedNav = ref("Home");
 </script>
 
 <template>
@@ -10,11 +14,16 @@ import Button from "./Button.vue";
       alt="Ration logo"
     />
     <ul class="text-white flex items-center gap-[2.5rem] font-medium text-base">
-      <li class="border-b">Home</li>
-      <li>Features</li>
-      <li>Pricing</li>
-      <li>Docs</li>
-      <li>Contact</li>
+      <li
+        v-for="item in navItems"
+        :key="item"
+        @click="selectedNav = item"
+        :class="{
+          'border-b-2 border-white pb-[0.15rem]': item === selectedNav,
+        }"
+      >
+        {{ item }}
+      </li>
     </ul>
     <Button>Get Started</Button>
   </section>
