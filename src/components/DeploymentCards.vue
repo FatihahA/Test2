@@ -1,34 +1,54 @@
 <template>
-  <section class="bg-bckg-blue py-[5rem] px-[2rem]">
-  <h3 class="font-bold text-black text-[3.5rem] text-center">Deployment Plan</h3>
-    <p class="font-base text-61-grey text-center text-[1rem]">
-      Choose the deployment edition that best aligns with your organization's<br />
+  <section
+    class="bg-bckg-blue px-[1.5rem] py-[5rem] md:px-[3rem] lg:px-[5rem] lg:py-[7.5rem]"
+  >
+    <h3
+      class="text-center text-[2.5rem] font-bold leading-tight text-black md:text-[3.5rem]"
+    >
+      Deployment Plan
+    </h3>
+    <p
+      class="mx-auto mt-[0.75rem] max-w-[48rem] text-center text-[1rem] text-61-grey"
+    >
+      Choose the deployment edition that best aligns with your organization's<br
+        class="hidden md:block"
+      />
       requirements, resources, and strategic objectives.
     </p>
-  <div class="mt-[3rem] grid grid-cols-1 justify-items-center gap-[1.5rem] md:grid-cols-2 lg:grid-cols-3">
-  <article
-    v-for="plan in DeploymentPlans"
-    :key="plan.id"
-    class="flex w-full max-w-[24rem] flex-col justify-between rounded-2xl bg-white p-[1.5rem] shadow-sm"
-  >
-    <div>
-      <h4 class="font-bold text-[1.125rem] text-center whitespace-pre-line mb-[1.5rem]">{{ plan.heading }}</h4>
-      <p class="font-base text-[1rem] whitespace-pre-line text-text-grey text-center mb-[2rem]">{{ plan.description }}</p>
-      <div class="flex flex-col gap-[1.5rem]">
-        <div
-          class="flex gap-[1rem]"
-          v-for="feature in plan.features"
-          :key="feature"
-        >
-          <img class="w-[1.5rem] h-[1.5rem]" src="/CheckIcon.png" />
-          <p>{{ feature }}</p>
+    <div class="mt-[3rem] flex flex-wrap justify-center gap-[1.5rem]">
+      <article
+        v-for="plan in DeploymentPlans"
+        :key="plan.id"
+        class="flex w-full max-w-[24rem] flex-col justify-between rounded-2xl bg-white p-[1.5rem] shadow-sm"
+      >
+        <div>
+          <h4
+            class="font-bold text-[1.125rem] text-center whitespace-pre-line mb-[1.5rem]"
+          >
+            {{ plan.heading }}
+          </h4>
+          <p
+            class="mb-[2rem] whitespace-pre-line text-center text-[1rem] text-text-grey"
+          >
+            {{ plan.description }}
+          </p>
+          <div class="flex flex-col gap-[1.5rem]">
+            <div
+              class="flex gap-[1rem]"
+              v-for="feature in plan.features"
+              :key="feature"
+            >
+              <img
+                class="h-[1.5rem] w-[1.5rem] shrink-0"
+                src="/CheckIcon.png"
+              />
+              <p>{{ feature }}</p>
+            </div>
+          </div>
         </div>
-      </div>
+        <Button class="mt-[3rem] w-full">Get Started</Button>
+      </article>
     </div>
-    <Button class="mt-[3rem] w-full"
-    v-if="id===1">Get Started</Button>
-  </article>
-  </div>
   </section>
 </template>
 

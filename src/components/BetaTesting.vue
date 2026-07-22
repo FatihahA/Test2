@@ -1,11 +1,15 @@
 <template>
-  <section class="bg-dark-blue h-auto [22.75rem] py-[5rem] px-[2rem]">
-    <h3 class="font-bold text-white text-[3.5rem] text-center">
+  <section class="bg-dark-blue px-[1.5rem] py-[5rem] md:px-[3rem] lg:px-[5rem]">
+    <h3
+      class="text-center text-[2.5rem] font-bold leading-tight text-white md:text-[3.5rem]"
+    >
       Join our Limited Testing Today
     </h3>
-    <p class="font-base text-[1.15rem] text-center text-white">
+    <p
+      class="mx-auto mt-[0.75rem] max-w-[44rem] text-center text-[1.15rem] text-white"
+    >
       Reach out to join our limited trial of Ration Messaging and
-      <br />Collaboration Platform.
+      <br class="hidden sm:block" />Collaboration Platform.
     </p>
     <div class="flex justify-center mt-[2rem]">
       <Button

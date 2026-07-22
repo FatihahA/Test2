@@ -2,15 +2,17 @@
   <article
     v-for="content in FeatureContents"
     :key="content.id"
-    class="border-e7-grey rounded-lg w-[22.37rem] bg-white border"
+    class="w-full rounded-lg border border-e7-grey bg-white sm:max-w-[22.37rem]"
   >
     <div class="p-[1.5rem]">
       <img
         class="bg-xlight-blue rounded-xl w-[3.5rem] h-[3.5rem] p-[0.875rem]"
         :src="content.icon"
       />
-      <h2>{{ content.heading }}</h2>
-      <p>{{ content.paragraph }}</p>
+      <h2 class="mt-[1.25rem] text-[1.25rem] font-semibold">
+        {{ content.heading }}
+      </h2>
+      <p class="mt-[0.5rem] text-text-grey">{{ content.paragraph }}</p>
     </div>
   </article>
 </template>
